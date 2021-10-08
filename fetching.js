@@ -10,7 +10,7 @@ xhr.open('GET', url, true);
 
 xhr.onload = function () {
     //res.write("hello");
-    var data = JSON.parse(this.response)
+    var data = JSON.parse(this.response);
     printing(n,data,res);
     res.end();
 }

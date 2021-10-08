@@ -14,6 +14,7 @@ function diff(res,owner,repository,oid,url,n){
         data = JSON.parse(this.response);
         parent = data["parents"][0]["sha"];
         url = `https://api.github.com/repos/${owner}/${repository}/compare/${parent}...${oid}`;
+       
     
         fetchingData(res,url,n);
     }
