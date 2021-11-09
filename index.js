@@ -1,11 +1,12 @@
 var express = require('express');
 var { diff } = require('./commitDiff');
 var { fetchingData } = require('./fetching');
+var cors = require('cors');
 
 var app = express();
 
 var owner,repository,oid,url;
-
+app.use(cors());
 app.get('/', function (req, res) {
    console.log("Got a POST request for the homepage");
    return res.redirect('/repositories/owner/repository/commits/oid');
